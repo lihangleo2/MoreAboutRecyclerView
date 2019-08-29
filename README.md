@@ -1,0 +1,2 @@
+# MoreAboutRecyclerView
+这可能是最全关于recyclerView各种用法，其中也封装了基础的万能适配器
