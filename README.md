@@ -195,3 +195,54 @@ new SwipItemHelper(adapter).attachRecyclerView(recyclerView)
 #### 效果如下：
 ![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/12.swip_menu.gif)  
 
+## 8、配合SmartRefreshLayout使用（实战应用）
+使用过的应该都明白了。
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/13.smartrefresh.gif)
+
+## 9、recyclerView实现展开/收起效果，展开时展示多条子集
+这里用到的原理是，多布局，notifyItemRangeInserted，notifyItemRangeRemoved，demo里很详细
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/14.showhide.gif)
+
+## 10、recyclerView实现viewPager效果
+有时候项目里需要viewPager效果，但是又需要动态移除item和加入item这个时候就可以用这种方法，而且还可以带动画
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/15.viewpager.gif)
+
+## 11、网格recyclerView布局合并
+网格添加布局的的思路，放在这里使用，真的效果不一般
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/16.gridspan.gif)
+
+## 12、item重叠实现酷炫效果
+这个功能是以前项目用到的。因为需要复用的关系，后面发现通过recyclerView的分割线可以快速实现
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/17.recover.gif)
+
+## 13、自定义折叠recyclerView(感谢启舰大神)
+大致思路是重写LayoutManager。demo里已经放了大神连接，大家可以去学习学习，太强了。超越了我对recyclerView的认识。  
+此功能也有2个效果：1.item可以一直滑动到最后一个   2.最后一整屏的item不可滑动，这是为了有些横向recyclerView放置在首页，美观一些
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/18.customrecyclerview.gif)
+
+## 14、StickyHeadListView
+粘性头部列表，这里没有讲recyclerView的分割线处理，是我发现很多demo，都是展示简单的文字粘性头部。demo里也给出了处理图片的，但是操作起来还是这个方便所以。需要使用，可以在demo里查看，注释完美。
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/19.stickyhead.gif)
+
+## 15、结合CoordinatorLayout使用
+可以实现多种酷炫效果，当中CollapsingToolbarLayout比较特殊也很好用，可以实现视觉差，及透明度渐变展现。xml注释完美
+
+#### 效果如下
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/20.coordinator.gif)
+
+
+
