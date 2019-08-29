@@ -53,15 +53,7 @@ public class GridActivity extends BaseActivity {
 
         addHead();
         addFoot();
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
-        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int i) {
-                return 0;
-            }
-        });
-
+        
     }
 
     @OnClick(R.id.btn_add)
