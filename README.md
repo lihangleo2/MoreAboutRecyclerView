@@ -73,7 +73,7 @@ Activity里的代码(一个简单的列表展示就完成了)：
         adapter.setDataList(arrayList);
         recyclerView.setAdapter(adapter);
 ```
-### 2.2、实现多布局
+### 1.2、实现多布局
 多布局的话，只要重写getMyViewType（int position）即可，代码如下：
 ```java
 public class MainAdapter extends BaseAdapter<MainBean> {
@@ -107,16 +107,67 @@ public class MainAdapter extends BaseAdapter<MainBean> {
 
 }
 ```
-### 2.3、添加头部
+#### 效果如下：
+首页是多布局，Normal是简单使用
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/1.normal.gif)  
+
+## 2、添加头部
 添加头部只需要(线性，网格，瀑布都是)：
 ```java
  View headLayout = LayoutInflater.from(AddHeadActivity.this).inflate(R.layout.layout_head, null);
  adapter.addHeadView(headLayout);
 ```
+添加头部和底部其实就是利用多布局，只不过已经做好了封装。  
+网格添加头部的特殊处理在：BaseAdapter 里的onAttachedToRecyclerView方法里。  
+瀑布流添加头部的特殊处理在：BaseAdapter 里的onViewAttachedToWindow里。
 
+### 2.1、网格recyclerView的均等分割线
+如果需要博主处理好的均等分割线加上：
+```java
+ //设置网格布局间隔，不用担心会不会不等分，一切已经计算好(由于是在复杂之计算到了5列)
+ adapter.setGridDivide(recyclerView, (int) getResources().getDimension(R.dimen.dp_10));
+```
+加上这句，你的分割线一定是10dp，且不会有item变形。这块讲解先看张图：
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/3.grid_itemd_math.png)  
 
+假设我们设置的分割线是20的话：  
+x1 = x2 = x3 = x4 = x5 = x6 = 20;  
+而且：  
+x1 + w + x2 = x3 + w + x4 = x5 + w + x6;将屏幕等分  
+有人说分割线可以随意设置，确实没错。如果有图片，你没有遵循上面这个规则，就会明显看到图片被pading压小。  
+现在要达到的效果是这样的：x1 = x2+x3 = x4+x5 = x6;  
+假设还是上面分割线20的话，由上图可知：分割线总长是120，有4条分割线，那么每条就是30；  
+在遵循上面的等式，那么就是x2把10 借给 x1; x5 把10 借给 x6; x3和x4保持不动，是不是达到效果了？然后在分割线里去设置。  
+因为随着列数越多，这个函数越不规律。博主只是用代码判断处理到了5列。有高数好的，帮我解决下
 
+#### 效果如下：
+|线性|网格|瀑布流|
+|:---:|:---:|:---:|
+|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/2.addhead.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/3.addheadbygrid.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/4.addheadbypull.gif)  
 
+## 3、添加动画
+这里处理处理动画有多种方式，个人觉得在OnBind里处理动画，会更佳简洁，明了。
+代码如下：
+```java
+//这是博主封装的几种常见的动画
+showItemAnim(AnimationType animationType）
+//你还可以自定义动画，只要传入resId即可
+showItemAnim(int animResId)
+```
+需要注意的是，因为在onBindView里处理动画，所以必须在绘制前调用adapter.showItemAnim(AnimationType.TRANSLATE_FROM_RIGHT);
 
+### 效果如下：
+|线性|网格|瀑布流|
+|:---:|:---:|:---:|
+|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/5.animation_linear.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/6.animation_grid.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/7.animation_pull.gif)
+|启动多张动画|
+|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/8.animation_even.gif)|
+
+## 4、点击item带圆圈扩散效果
+这个其实就是利用ripple来做，直接设置在布局背景里 android:background="@drawable/linerlayout_water_selector"  
+这里不封装进去，是因为有可能你布局点击区域是整条，也有可能跟itemView有间距，所以还是自己设置最合理。
+
+### 效果如下：
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/9.ripper.gif)  
 
    
