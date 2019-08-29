@@ -156,7 +156,7 @@ showItemAnim(int animResId)
 ```
 需要注意的是，因为在onBindView里处理动画，所以必须在绘制前调用adapter.showItemAnim(AnimationType.TRANSLATE_FROM_RIGHT);
 
-### 效果如下：
+#### 效果如下：
 |线性|网格|瀑布流|
 |:---:|:---:|:---:|
 |![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/5.animation_linear.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/6.animation_grid.gif)|![](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/7.animation_pull.gif)
@@ -167,7 +167,12 @@ showItemAnim(int animResId)
 这个其实就是利用ripple来做，直接设置在布局背景里 android:background="@drawable/linerlayout_water_selector"  
 这里不封装进去，是因为有可能你布局点击区域是整条，也有可能跟itemView有间距，所以还是自己设置最合理。
 
-### 效果如下：
+#### 效果如下：
 ![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/9.ripper.gif)  
 
+## 5、recyclerView各种适配器刷新
+代码里注释不要太详细，这里就不做介绍了
+
+#### 效果如下：
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/10.notify.gif)  
    
