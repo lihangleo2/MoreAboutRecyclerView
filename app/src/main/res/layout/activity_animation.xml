@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <com.lihang.smartloadview.SmartLoadingView
+        android:id="@+id/smartLoadingView_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRaius="10dp"
+        app:normalBg="#e27070"
+        app:textColor="#000"
+        app:textSize="14dp"
+        app:textStr="线性recyclerView动画展示"
+        app:scrollSpeed="500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <com.lihang.smartloadview.SmartLoadingView
+        android:layout_below="@+id/smartLoadingView_linear"
+        android:id="@+id/smartLoadingView_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRaius="10dp"
+        app:normalBg="#7270e2"
+        app:textColor="#000"
+        app:textSize="14dp"
+        app:textStr="网格recyclerView动画展示"
+        app:scrollSpeed="500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <com.lihang.smartloadview.SmartLoadingView
+        android:layout_below="@+id/smartLoadingView_grid"
+        android:id="@+id/smartLoadingView_strag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRaius="10dp"
+        app:normalBg="#dc70e2"
+        app:textColor="#000"
+        app:textSize="14dp"
+        app:textStr="瀑布recyclerView动画展示"
+        app:scrollSpeed="500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <com.lihang.smartloadview.SmartLoadingView
+        android:layout_below="@+id/smartLoadingView_strag"
+        android:id="@+id/smartLoadingView_withMuti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRaius="10dp"
+        app:normalBg="#e2a170"
+        app:textColor="#000"
+        app:textSize="14dp"
+        app:textStr="你甚至还能这么玩"
+        app:scrollSpeed="500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+</RelativeLayout>

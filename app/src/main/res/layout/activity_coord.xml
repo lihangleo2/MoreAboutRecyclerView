@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:elevation="0dp">
+        <!--要配合AppBarLayout使用，放置2个根布局，第一个根布局是可滑动的。第二个是悬浮在顶部的-->
+        <!--关键属性有个layout_scrollFlags，就是滑动方式，网上很多讲解的,我这里放的scroll|snap，表示滑动过一半松手，会自动滑动过去，不过一半，会自动滑回来-->
+        <!--这里我用了CollapsingToolbarLayout，是为了图片滚动和其他有视觉差才用layout_collapseMode，属性，如果不需要，可以把CollapsingToolbarLayout换成其他布局-->
+        <!--layout_collapseParallaxMultiplier = 1;那么头部将完全固定，不移动。等于0，布局滑动多少，图片跟着滑动多少-->
+        <!--app:contentScrim="@color/alpha_color"   这个属性设置的是滑动的时候，第一布局带alpha_color渐变消失-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/alpha_color"
+            app:layout_scrollFlags="scroll|snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.9">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/girl" />
+
+                <!--这个用来做个移动动画，在activity里-->
+                <TextView
+                    android:id="@+id/txt_move"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="为了做个动画存在"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#c3c3c3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="这里是放置你想悬浮的布局"
+                android:textColor="#ff0000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--这里有个重要的属性，加上，recyclerView滑动将与其关联-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+
+</android.support.design.widget.CoordinatorLayout>

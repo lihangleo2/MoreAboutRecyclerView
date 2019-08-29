@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="正常带上下加载的" />
+
+    <Button
+        android:id="@+id/btn_pureScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_normal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="纯滚动效果(俗称果冻效果)" />
+
+
+    <Button
+        android:id="@+id/btn_only_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_pureScroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="只有刷新，下拉是果冻" />
+
+
+    <Button
+        android:id="@+id/btn_hori_pure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_only_refresh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="横向果冻效果" />
+
+    <Button
+        android:id="@+id/btn_hori_smart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_hori_pure"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="横向加载" />
+
+</RelativeLayout>

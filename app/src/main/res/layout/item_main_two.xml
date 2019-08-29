@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:hl_cornerRadius="10dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowBackColor="#fff"
+        app:hl_shadowColor="#2a000000"
+        app:hl_shadowLimit="5dp">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/txt_index"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_circle"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/txt_index">
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/txt_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_marginTop="5dp"
+                    android:text="我是描述"
+                    android:textSize="12dp"
+                    android:textColor="#b4acac"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </com.lihang.ShadowLayout>
+
+</RelativeLayout>

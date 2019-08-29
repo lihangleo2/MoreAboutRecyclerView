@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--app:srlEnableLoadMore="true"-->
+    <!--app:srlEnableOverScrollDrag="true"-->
+    <!--app:srlEnableRefresh="true"-->
+    <!--目前SmartRefreshHorizontal有个bug，必须要设置他的高度，不然在滑动的时候会消失-->
+    <!--大致原因可能是因为加载头的关系，包括SmartRefreshLayout还没有把横向代码加入到依赖里，也足以说明这个问题-->
+    <com.lihang.nbadapter.horismartrefresh.SmartRefreshHorizontal
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMoreWhenContentNotFull="true">
+
+        <com.scwang.smartrefresh.header.WaterDropHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <com.scwang.smartrefresh.header.WaterDropHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.lihang.nbadapter.horismartrefresh.SmartRefreshHorizontal>
+</RelativeLayout>

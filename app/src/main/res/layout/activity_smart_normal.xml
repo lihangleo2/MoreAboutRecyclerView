@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--纯滚动模式-->
+    <!--pp:srlEnablePureScrollMode="true"-->
+    <!--如果是这种就可以，控制上方纯滚动，下方加载的效果-->
+    <!--app:srlEnableOverScrollDrag="true"-->
+    <!--app:srlEnableLoadMore="true"-->
+    <!--app:srlEnableRefresh="false"-->
+    <!--取消自动加载-->
+    <!--app:srlEnableAutoLoadMore="false"-->
+    <!--列表不足一屏幕时也能加载更多-->
+    <!--app:srlEnableLoadMoreWhenContentNotFull="true"-->
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMoreWhenContentNotFull="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"></android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</RelativeLayout>

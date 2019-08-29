@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/notifyItemChanged"
+        android:orderInCategory="50"
+        android:title="notifyItemChanged()"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/notifyItemInserted"
+        android:orderInCategory="50"
+        android:title="notifyItemInserted()"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/notifyItemRemoved"
+        android:orderInCategory="50"
+        android:title="notifyItemRemoved()"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/notifyItemRangeInserted"
+        android:orderInCategory="50"
+        android:title="notifyItemRangeInserted()"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/notifyItemRangeRemoved"
+        android:orderInCategory="50"
+        android:title="notifyItemRangeRemoved()"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/notifyItemMoved"
+        android:orderInCategory="50"
+        android:title="notifyItemMoved()"
+        app:showAsAction="never" />
+</menu>

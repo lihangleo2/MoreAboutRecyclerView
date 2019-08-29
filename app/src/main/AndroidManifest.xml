@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lihang.nbadapter">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SimpleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.AddHeadActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.GridActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.PullActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LinearAnimActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.MutifyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.GridAnimActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.PullAnimActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ClickWithShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SwipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SwipSlideItemActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.SmartRefreshActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SmartNormalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SmartPureScrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SmartOnlyRefreshActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SmartHoriPureScrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SmartHoriNormalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ExpandActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.UseByPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SpanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecoverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FoldActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StickyHeadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CoordActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <LinearLayout
+        android:layout_above="@+id/line"
+        android:id="@+id/slide"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/zhiding"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#C8C7CD"
+            android:gravity="center"
+            android:text="置顶"
+            android:textColor="#ffffff" />
+
+
+
+        <TextView
+            android:id="@+id/shanchu"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#FE3C31"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/line"
+        android:id="@+id/slide_itemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="slide_flag">
+
+        <TextView
+            android:id="@+id/txt_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="item"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c6c6c6" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/drag_swip"
+        android:orderInCategory="50"
+        android:title="拖拽和侧滑"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/only_drag"
+        android:orderInCategory="50"
+        android:title="只要拖拽"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/only_swip"
+        android:orderInCategory="50"
+        android:title="只要侧滑"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/only_left_swip"
+        android:orderInCategory="50"
+        android:title="只要左滑"
+        app:showAsAction="never" />
+
+</menu>
