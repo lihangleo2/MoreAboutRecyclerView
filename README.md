@@ -258,5 +258,6 @@ new SwipItemHelper(adapter).attachRecyclerView(recyclerView)
 ![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/20.coordinator.gif)
 
 ## 结束语：为了功能分开便于查看，写重复代码敲到手酸，如果你会心疼人且有良心的话0 0，给我一个赞鼓励我把
+## [掘金博客地址](https://juejin.im/post/5d67927be51d45620c1c53ff)
 
 
