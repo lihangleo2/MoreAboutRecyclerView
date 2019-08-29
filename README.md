@@ -1,5 +1,4 @@
-## 这是一个总结recyclerView各种用法的demo。及封装各种你用到的功能的小小万能适配器
-[博客详细教程地址-稍后加上](https://juejin.im/post/5d5ce44d5188252231108e68)  
+## 这是一个总结recyclerView各种用法的demo。及封装各种你用到的功能的小小万能适配器 
 
 #### 先来说说此demo包含的内容：
 
@@ -20,8 +19,6 @@
 * 跟着启舰思想，实现一个效果爆炸的recyclerView
 * recyclerView的粘性头部
 * 结合CoordinatorLayout使用，某布局置顶，及各种效果  
-
-
 
 ## 友情链接
 ui中再遇到阴影时,跟Ui小姐姐说,阴影部分别担心，我自己来
@@ -175,4 +172,26 @@ showItemAnim(int animResId)
 
 #### 效果如下：
 ![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/10.notify.gif)  
-   
+
+## 6、item侧滑和拖拽效果
+利用系统类ItemTouchHelper完成，封装在项目里的DragSwipHelper里；
+需要这个效果只要：
+```java
+new DragSwipHelper().attachSwipAndDragRecyclerView(recyclerView, adapter);
+```
+
+#### 效果如下：
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/11.swip.gif)  
+
+## 7、item实现侧滑菜单（感谢牛人）
+因为之前很久集成在自己项目里，忘记了牛人地址，抱歉，如有知道还请提醒。大致思路是通过分割线来完成，通过onDrawOver，和onDraw。  
+此功能有2个效果：1.侧滑菜单跟随item左滑。  2.侧滑菜单隐藏在item条目下。封装在项目里的SwipItemHelper  
+使用：
+```java
+new SwipItemHelper(adapter).attachRecyclerView(recyclerView)
+```
+侧滑菜单的layout就是在item布局里，2种效果也是通过布局的排列实现
+
+#### 效果如下：
+![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/12.swip_menu.gif)  
+
