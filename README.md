@@ -104,6 +104,19 @@ public class MainAdapter extends BaseAdapter<MainBean> {
 
 }
 ```
+
+### 1.3、设置点击事件
+BaseAdapter里已经封装了接口onItemClickListener，onItemLongClickListener。如果需要单独设置控件点击事件，只要activity实现这个接口，在new完Adapter的时候，设置进去 adapter.setOnItemClickListener(this)。然后在onBindMyView里，进行使用。
+如果是条目点击，直接设置进去即可，base里已经处理了。
+```java
+adapter.setOnItemClickListener(new BaseAdapter.OnItemClickListener<MainBean>() {
+            @Override
+            public void onItemClick(MainBean item, int position) {
+                
+            }
+        });
+```
+
 #### 效果如下：
 首页是多布局，Normal是简单使用
 ![image](https://github.com/lihangleo2/RandomRecycleView/blob/master/gifshow/1.normal.gif)  
