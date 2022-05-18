@@ -481,7 +481,8 @@ public class WItemTouchHelperPlus extends RecyclerView.ItemDecoration
                     break;
                 }
                 default:
-                    mClick = false;
+                    //Bug部位
+                    //mClick = false;
                     break;
             }
         }
