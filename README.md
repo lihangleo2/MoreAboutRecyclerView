@@ -42,7 +42,7 @@ ui中再遇到阴影时,跟Ui小姐姐说,阴影部分别担心，我自己来
  - app build.gradle添加如下
     ```java
    dependencies {
-	        implementation 'com.github.lihangleo2:MoreAboutRecyclerView:1.0.2'
+	        implementation 'com.github.lihangleo2:MoreAboutRecyclerView:1.0.1'
 	}
    ```
    
